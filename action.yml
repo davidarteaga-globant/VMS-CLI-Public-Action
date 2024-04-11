@@ -1,11 +1,27 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'VMS CLI Public action'
+description: 'VMS-CLI public action for github workflows'
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
     default: 'World'
+  client_name:
+    description: 'Name of the Client assigned on VMS Platform'
+    required: true
+    default: ''
+  project_name:
+    description: 'Name of the Project created to the Client assigned on VMS Platform'
+    required: true
+    default: ''
+  ecosystem:
+    description: 'Name of the Ecosystem of the project created on VMS Platform'
+    required: true
+    default: ''
+  api_key:
+    description: 'VMS API Key assigned for the Client on VMS Platform'
+    required: true
+    default: ''
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -14,3 +30,7 @@ runs:
   image: 'Dockerfile'
   env:
     INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
+    CLIENT_NAME: ${{ inputs.client_name }}
+    PROJECT_NAME: ${{ inputs.project_name }}
+    ECOSYSTEM: ${{ inputs.ecosystem }}
+    API_KEY: ${{ inputs.api_key }}

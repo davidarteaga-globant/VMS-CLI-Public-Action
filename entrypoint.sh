@@ -9,6 +9,4 @@ echo "::notice file=entrypoint.sh,line=7::$GREETING"
 # Write outputs to the $GITHUB_OUTPUT file
 echo "time=$(date)" >>"$GITHUB_OUTPUT"
 
-python3 /app/main.py
-
-exit 0
+python3 /app/main.py --api_key=$API_KEY --ecosystem=$ECOSYSTEM --client_name=$CLIENT_NAME --project=$PROJECT_NAME
