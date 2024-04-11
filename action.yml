@@ -2,10 +2,6 @@
 name: 'VMS CLI Public action'
 description: 'VMS-CLI public action for github workflows'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
   client_name:
     description: 'Name of the Client assigned on VMS Platform'
     required: true
