@@ -9,8 +9,14 @@ echo "::notice file=entrypoint.sh,line=7::$GREETING"
 # Write outputs to the $GITHUB_OUTPUT file
 echo "time=$(date)" >>"$GITHUB_OUTPUT"
 
-pwd
-ls -la
+echo 1
+echo $GITHUB_WORKSPACE
+echo $FOLDER_TO_SCAN1
+echo $FOLDER_TO_SCAN2
+echo 2
+
+mkdir /app/scan_folder
+cp -r $FOLDER_TO_SCAN1 /app/scan_folder 
 
 cd /app
 python3 main.py --api_key=$API_KEY --ecosystem=$ECOSYSTEM --client_name=$CLIENT_NAME --project=$PROJECT_NAME
