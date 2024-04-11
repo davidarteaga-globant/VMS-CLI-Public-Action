@@ -34,5 +34,5 @@ runs:
     PROJECT_NAME: ${{ inputs.project_name }}
     ECOSYSTEM: ${{ inputs.ecosystem }}
     API_KEY: ${{ inputs.api_key }}
-    FOLDER_TO_SCAN1: ${{ GITHUB_WORKSPACE }}
-    FOLDER_TO_SCAN2: ${{ github.workspace }}
+    FOLDER_TO_SCAN1: $GITHUB_WORKSPACE
+    FOLDER_TO_SCAN2: $RUNNER_WORKSPACE
