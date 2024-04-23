@@ -52,4 +52,4 @@ jobs:
           api_key: ${{ secrets.VMS_API_KEY }}
       - name: Get the output time of scanning start
         run: echo "The time was ${{ steps.vms-cli.outputs.time }}"
-´´´
+```
