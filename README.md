@@ -29,6 +29,8 @@ The time that VMS CLI scan was executed.
 
 ## Example usage
 
+This example shows how to call this public action. This example executes a VMS CLI Scan for every pull request but this can be changed depending on the needs.
+
 ```
 on:
   pull_request:
