@@ -1,4 +1,4 @@
-# VMS CLI docker action
+# VMS CLI Github public action
 
 This action executes a VMS scan using the CLI. Results are going to be uploaded into the VMS Platform when the scan is finished.
 The action can be integrated in any Github workflow since is this action is public.
