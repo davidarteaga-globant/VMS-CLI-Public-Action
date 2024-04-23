@@ -46,9 +46,9 @@ jobs:
         id: vms-cli
         uses: davidarteaga-globant/VMS-CLI-Public-Action@main
         with:
-          client_name: 'Dev'
-          project_name: 'Test'
-          ecosystem: 'vms-cli'
+          client_name: 'Dev' #Example client name, replace it.
+          project_name: 'Test' #Example project name, replace it.
+          ecosystem: 'vms-cli' #Example ecosystem, replace it.
           api_key: ${{ secrets.VMS_API_KEY }}
       - name: Get the output time of scanning start
         run: echo "The time was ${{ steps.vms-cli.outputs.time }}"
