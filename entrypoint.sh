@@ -13,4 +13,4 @@ mkdir /app/scan_folder
 cp -r $GITHUB_WORKSPACE /app/scan_folder 
 
 cd /app
-python3 main.py --api_key=$API_KEY --ecosystem=$ECOSYSTEM --client_name=$CLIENT_NAME --project=$PROJECT_NAME
+python3 main.py --api_key=$API_KEY --ecosystem=$ECOSYSTEM --client_name=$CLIENT_NAME --project=$PROJECT_NAME --vms_upload=True
