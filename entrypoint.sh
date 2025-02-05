@@ -9,7 +9,9 @@ echo "::notice file=entrypoint.sh,line=7::$GREETING"
 # Write outputs to the $GITHUB_OUTPUT file
 echo "time=$(date)" >>"$GITHUB_OUTPUT"
 
-mkdir /app/scan_folder
+if [ ! -d "$DIRECTORY" ]; then
+  mkdir -p /app/scan_folder
+fi
 cp -r $GITHUB_WORKSPACE /app/scan_folder 
 
 cd /app
